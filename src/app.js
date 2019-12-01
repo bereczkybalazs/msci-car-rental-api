@@ -1,7 +1,8 @@
 const express = require('express');
+const cars = require('./modules/car/car-controller');
+
 const app = express();
 const port = 3000;
-const cars = require('./modules/car/car-controller');
 
 app.get('/', (req, res) => cars.get(req, res));
 

@@ -1,5 +1,9 @@
+const carModel = require('./car-model');
+
 module.exports = {
   get: (req, res) => {
-    res.send('list of cars');
+    carModel.all().then((results) => {
+      res.send(results);
+    });
   }
 };
